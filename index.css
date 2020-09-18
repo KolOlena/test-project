@@ -1,0 +1,139 @@
+/*remove any browser borders*/
+*{
+    padding: 0;
+    margin: 0;
+}
+
+/*set style for page, set grid template for all page*/
+.wrapper {
+    display: grid;
+    grid-template-areas:
+    's h'
+    's c';
+    grid-template-rows: 60px 1fr;
+    grid-template-columns: 60px 1320px;
+    height: 780px;
+    width: 100%;
+}
+
+/*set styles for main content block*/
+.content {
+    grid-area: c;
+    background-color: #b4b9bd;
+}
+
+/*set styles for sidebar*/
+.sidebar {
+    overflow-x: hidden;
+    z-index: 1;
+    transition: 0.5s;
+    width: 100px;
+    grid-area: s;
+    background-color: #384756;
+
+}
+
+/*set styles for header*/
+.header {
+    grid-area: h;
+    background-color: #f0f1f0;
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+/*style for header, divide search and nav icons*/
+
+.headerSidebar {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    height: 60px;
+    background-color: #333f4e;
+}
+
+/*styles for sidebar*/
+
+.navPanel {
+    display: grid;
+    grid-template-columns: 40px 40px 40px;
+    padding-top: 15px;
+    justify-self: end;
+    grid-gap: 1em;
+}
+
+/*styles for search pannel*/
+
+input,
+textarea {
+    background-color: #f0f1f0;
+    border:none;
+    outline:none;
+    height: 60px;
+    padding-left: 50px;
+}
+
+/*styles for ul list*/
+
+ul {
+    padding: 50px 0px 0px 20px;
+    list-style: none
+
+}
+
+/*styles for lists points*/
+
+li {
+    padding-bottom: 25px;
+    font-family: sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/*styles for links*/
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: white;
+    transition: 0.3s
+}
+
+/*styles for close button*/
+
+.closebtn {
+    margin-left: 150px;
+    padding-top: 20px;
+    display: none;
+    color: white;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-weight: bold;
+
+}
+
+/*styles for divider*/
+
+.divider {
+    width: 600px;
+    height: 10px;
+    background-color: #f0f1f0;
+    border-radius: 5px;
+    margin: 20px 0px 20px 80px;
+}
+
+/*styles for main page content, divide to the 2 parts*/
+.mainPageContent {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 1em;
+    padding:  0px  40px 0px 80px;
+    height: 100%;
+}
+
+
+/*styles for parts of main content*/
+
+.activity, .vehicles {
+    background-color: #f0f1f0;
+    border-radius: 5px;
+    height: 90%;
+
+}
